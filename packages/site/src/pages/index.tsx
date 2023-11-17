@@ -5,8 +5,9 @@ import {
   ConnectButton,
   InstallFlaskButton,
   ReconnectButton,
-  SendHelloButton,
+  SendVoteButton,
   Card,
+  VoteTitleInput
 } from '../components';
 import { defaultSnapOrigin } from '../config';
 import { MetamaskActions, MetaMaskContext } from '../hooks';
@@ -138,9 +139,9 @@ const Index = () => {
       <Heading>
         Welcome to <Span>vote-snap</Span>
       </Heading>
-      <Subtitle>
+      {/* <Subtitle>
         Get started by editing <code>src/index.ts</code>
-      </Subtitle>
+      </Subtitle> */}
       <CardContainer>
         {state.error && (
           <ErrorMessage>
@@ -192,15 +193,16 @@ const Index = () => {
         )}
         <Card
           content={{
-            title: 'Send Hello message',
+            title: 'Submit your vote',
             description:
-              'Display a custom message within a confirmation screen in MetaMask.',
+              "Submit your vote by selecting your preferred option and clicking the 'Submit Vote' button",
             button: (
-              <SendHelloButton
+              <SendVoteButton
                 onClick={handleSendHelloClick}
                 disabled={!state.installedSnap}
               />
             ),
+            input: <VoteTitleInput />
           }}
           disabled={!state.installedSnap}
           fullWidth={
