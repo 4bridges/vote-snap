@@ -98,17 +98,7 @@ export const ReconnectButton = (props: ComponentProps<typeof Button>) => {
 };
 
 export const SendVoteButton = (props: ComponentProps<typeof Button>) => {
-  const handleVoteSubmit = async () => {    
-
-    // const result = await voteContract.methods.createVote('contract').call();
-    // console.log(result);
-    
-  };
-  return (
-    <Button {...props}>
-      Submit Vote
-    </Button>
-  );
+  return <Button {...props}>Create Vote</Button>;
 };
 
 export const HeaderButtons = ({
