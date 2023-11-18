@@ -167,7 +167,7 @@ const Index = () => {
                 'Get started by connecting to and installing the example snap.',
               button: (
                 <ConnectButton
-                  onClick={handleConnectClick}
+                 onClick={handleConnectClick}
                   disabled={!isMetaMaskReady}
                 />
               ),
@@ -198,7 +198,7 @@ const Index = () => {
               "Submit your vote by selecting your preferred option and clicking the 'Submit Vote' button",
             button: (
               <SendVoteButton
-                onClick={handleSendHelloClick}
+                // onClick={handleSendHelloClick}
                 disabled={!state.installedSnap}
               />
             ),
