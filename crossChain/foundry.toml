@@ -6,7 +6,8 @@ remappings = [
     '@chainlink/contracts/=lib/chainlink/contracts/',
     '@chainlink/contracts-ccip/=lib/ccip/contracts/'
 ]
-solc = '0.8.23'
+# solc = '0.8.23'
+auto_detect_solc = true
 
 [rpc_endpoints]
 ethereumSepolia = "${ETHEREUM_SEPOLIA_RPC_URL}"
