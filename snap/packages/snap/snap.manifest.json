@@ -29,7 +29,7 @@
         {
           "expression": "* * * * *",
           "request": {
-            "method": "exampleMethodOne",
+            "method": "checkVote",
             "params": {
               "param1": "foo"
             }
