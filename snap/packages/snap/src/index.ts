@@ -5,8 +5,7 @@ import type {
 import { panel, text } from '@metamask/snaps-ui';
 import * as ethers from 'ethers';
 import Vote from '../../../../contracts/build/contracts/Vote.json';
-import { voteContractAddress } from 'config'; // Import the contract address
-import { JsonRpcProviderAddress } from 'config';
+import { JsonRpcProviderAddress, voteContractAddress } from './config';
 
 /**
  * Handle incoming JSON-RPC requests, sent through `wallet_invokeSnap`.
@@ -18,15 +17,9 @@ import { JsonRpcProviderAddress } from 'config';
  * @returns The result of `snap_dialog`.
  * @throws If the request method is not valid for this snap.
  */
-const provider = new ethers.providers.JsonRpcProvider(
-  JsonRpcProviderAddress,
-);
+const provider = new ethers.providers.JsonRpcProvider(JsonRpcProviderAddress);
 
-const contract = new ethers.Contract(
-  voteContractAddress,
-  Vote.abi,
-  provider,
-);
+const voteFactoryContract = new ethers.Contract(voteContractAddress, Vote.abi, provider);
 
 export const onRpcRequest: OnRpcRequestHandler = async ({
   origin,
@@ -57,7 +50,10 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
 export const onCronjob: OnCronjobHandler = async ({ request }) => {
   switch (request.method) {
     case 'checkVote':
-      
+
+
+
+
       return snap.request({
         method: 'snap_notify',
         params: {
