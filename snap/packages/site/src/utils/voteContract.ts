@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import VoteBuilderContractABI from '../../../../../contracts/build/contracts/VoteBuilder.json'; // Import the ABI from the compiled contract
+import VoteFactory from '../../../../../contracts/build/contracts/VoteFactory.json'; 
 import { voteContractAddress } from '../config/snap';
 
 //@ts-ignore
@@ -8,7 +8,7 @@ export const provider = new ethers.providers.Web3Provider(window.ethereum);
 export const signer = provider.getSigner(); 
 export const voteContract = new ethers.Contract(
   voteContractAddress,
-  VoteBuilderContractABI.abi,
+  VoteFactory.abi,
   signer,
 );
 

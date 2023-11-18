@@ -160,7 +160,7 @@ const Index = () => {
     try {
       // const result = await sendHello();
 
-      const res = await voteContract.createVote('voteTitle');
+      const res = await voteContract.createVote(voteTitle);
 
       console.log(res);
     } catch (error) {

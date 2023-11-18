@@ -4,7 +4,7 @@ import type {
 } from '@metamask/snaps-types';
 import { panel, text } from '@metamask/snaps-ui';
 import * as ethers from 'ethers';
-import VoteBuilder from '../../../../contracts/build/contracts/VoteBuilder.json';
+import Vote from '../../../../contracts/build/contracts/Vote.json';
 import { voteContractAddress } from 'config'; // Import the contract address
 import { JsonRpcProviderAddress } from 'config';
 
@@ -24,7 +24,7 @@ const provider = new ethers.providers.JsonRpcProvider(
 
 const contract = new ethers.Contract(
   voteContractAddress,
-  VoteBuilder.abi,
+  Vote.abi,
   provider,
 );
 
