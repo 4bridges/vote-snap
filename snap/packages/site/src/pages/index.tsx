@@ -173,8 +173,6 @@ const Index = () => {
 
       const res = await voteContract.createVote(voteTitle);
 
-      console.log(res);
-
       setVoteTitle('');
     } catch (error) {
       console.error(error);

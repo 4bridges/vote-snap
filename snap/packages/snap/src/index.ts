@@ -4,8 +4,9 @@ import type {
 } from '@metamask/snaps-types';
 import { panel, text } from '@metamask/snaps-ui';
 import * as ethers from 'ethers';
+import VoteFactory from '../../../../contracts/build/contracts/VoteFactory.json';
 import Vote from '../../../../contracts/build/contracts/Vote.json';
-import { JsonRpcProviderAddress, voteContractAddress } from './config';
+import { voteContractAddress } from './config';
 
 /**
  * Handle incoming JSON-RPC requests, sent through `wallet_invokeSnap`.
@@ -17,9 +18,21 @@ import { JsonRpcProviderAddress, voteContractAddress } from './config';
  * @returns The result of `snap_dialog`.
  * @throws If the request method is not valid for this snap.
  */
-const provider = new ethers.providers.JsonRpcProvider(JsonRpcProviderAddress);
+const provider = new ethers.providers.InfuraProvider(
+  'sepolia',
+  'a80f928d9a7940779f24bd95f48b3e05',
+);
 
-const voteFactoryContract = new ethers.Contract(voteContractAddress, Vote.abi, provider);
+const voteFactoryContract = new ethers.Contract(
+  voteContractAddress,
+  VoteFactory.abi,
+  provider,
+);
+
+ethereum.request({
+  method: 'eth_requestAccounts',
+  params: [],
+});
 
 export const onRpcRequest: OnRpcRequestHandler = async ({
   origin,
@@ -27,42 +40,46 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
 }) => {
   switch (request.method) {
     case 'hello':
-      const result = snap.request({
-        method: 'snap_dialog',
-        params: {
-          type: 'confirmation',
-          content: panel([
-            text(`Hello, **${origin}**!`),
-            text('This custom confirmation is just for display purposes.'),
-            text(
-              'But you can edit the snap source code to make it do something, if you want to!',
-            ),
-          ]),
-        },
-      });
+      break;
 
-      return result;
-    default:
-      throw new Error('Method not found.');
+    // default:
+    //   throw new Error('Method not found.');
   }
 };
 
 export const onCronjob: OnCronjobHandler = async ({ request }) => {
-  switch (request.method) {
-    case 'checkVote':
+  try {
+    switch (request.method) {
+      case 'checkVote':
+        const address = (await ethereum.request({
+          method: 'eth_requestAccounts',
+          params: [],
+        })) as any[];
 
+        const deployedVotes = await voteFactoryContract.getDeployedVotes();
 
+        for (let i = 0; i < deployedVotes.length; i++) {
+          const element = deployedVotes[i];
+          const voteContract = new ethers.Contract(element, Vote.abi, provider);
+          const hasVote = await voteContract.votes(address[0]);
 
+          if (hasVote == false) {
+            const title = await voteContract.title();
 
-      return snap.request({
-        method: 'snap_notify',
-        params: {
-          type: 'inApp',
-          message: `Hello, world!`,
-        },
-      });
+            snap.request({
+              method: 'snap_notify',
+              params: {
+                type: 'inApp',
+                message: title,
+              },
+            });
+          }
+        }
 
-    default:
-      throw new Error('Snap: Method not found.');
+      default:
+      // throw new Error('Snap: Method not found.');
+    }
+  } catch (error) {
+    console.log(error);
   }
 };
