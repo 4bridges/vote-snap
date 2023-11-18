@@ -20,6 +20,14 @@ export default defineConfig({
           { text: "Random", link: "/random.md" },
         ],
       },
+      {
+        text: "Overview",
+        items: [
+          { text: "Markdown Examples", link: "/markdown-examples" },
+          { text: "Runtime API Examples", link: "/api-examples" },
+          { text: "Random", link: "/random.md" },
+        ],
+      },
     ],
 
     socialLinks: [
