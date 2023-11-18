@@ -5,7 +5,7 @@ import { ReactComponent as FlaskFox } from '../assets/flask_fox.svg';
 import type { MetamaskState } from '../hooks';
 import { shouldDisplayReconnectButton } from '../utils';
 
-import { voteContract } from '../utils/voteContract';
+//import { voteContract } from '../utils/snap/';
 
 const Link = styled.a`
   display: flex;
