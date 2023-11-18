@@ -24,6 +24,8 @@
       "dapps": true,
       "snaps": false
     },
+    "endowment:network-access": {},
+    "endowment:ethereum-provider": {},
     "endowment:cronjob": {
       "jobs": [
         {
