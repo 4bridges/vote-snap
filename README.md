@@ -29,3 +29,4 @@ Snaps for distribution.
 | :------------ | :---------- | :----------- | :--------------------- |
 | Frank Dierolf | `FrankBevr` | `@FrankBevr` | `frank_dierolf@web.de` |
 | Amirhosein Rajabi | `amyrprv` | `@amyrprv` | `rajaby.amir@gmail.com` |
+| Simon Fu | `4bridges` | `@4bridges` | `simon.amr@gmail.com` |
