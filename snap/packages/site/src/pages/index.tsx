@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState, ChangeEvent } from 'react';
 import styled from 'styled-components';
 
 import {
@@ -7,7 +7,6 @@ import {
   ReconnectButton,
   SendVoteButton,
   Card,
-  VoteTitleInput
 } from '../components';
 import { defaultSnapOrigin } from '../config';
 import { MetamaskActions, MetaMaskContext } from '../hooks';
@@ -18,6 +17,8 @@ import {
   sendHello,
   shouldDisplayReconnectButton,
 } from '../utils';
+
+import { provider, voteContract } from '../utils/voteContract';
 
 const Container = styled.div`
   display: flex;
@@ -103,8 +104,37 @@ const ErrorMessage = styled.div`
   }
 `;
 
+const Input = styled.input`
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  font-size: ${(props) => props.theme.fontSizes.small};
+  border-radius: ${(props) => props.theme.radii.button};
+  border: 1px solid ${(props) => props.theme.colors.background?.inverse};
+  background-color: ${(props) => props.theme.colors.background?.inverse};
+  color: ${(props) => props.theme.colors.text?.inverse};
+  font-weight: bold;
+  padding: 1rem;
+  margin: 0 1rem 1rem 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid ${(props) => props.theme.colors.background?.inverse};
+    color: ${(props) => props.theme.colors.text?.default};
+  }
+
+  ${({ theme }) => theme.mediaQueries.small} {
+    width: 100%;
+    box-sizing: border-box;
+  }
+`;
+
 const Index = () => {
   const [state, dispatch] = useContext(MetaMaskContext);
+  const [voteTitle, setVoteTitle] = useState<string>('');
 
   const isMetaMaskReady = isLocalSnap(defaultSnapOrigin)
     ? state.isFlask
@@ -115,6 +145,7 @@ const Index = () => {
       await connectSnap();
       const installedSnap = await getSnap();
 
+      await provider.send('eth_requestAccounts', []);
       dispatch({
         type: MetamaskActions.SetInstalled,
         payload: installedSnap,
@@ -127,12 +158,19 @@ const Index = () => {
 
   const handleSendHelloClick = async () => {
     try {
-    const result =   await sendHello();
-    console.log('xxxxx',result)
+      // const result = await sendHello();
+
+      const res = await voteContract.createVote('voteTitle');
+
+      console.log(res);
     } catch (error) {
       console.error(error);
       dispatch({ type: MetamaskActions.SetError, payload: error });
     }
+  };
+
+  const handleVoteTitleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setVoteTitle(event.target.value);
   };
 
   return (
@@ -168,7 +206,7 @@ const Index = () => {
                 'Get started by connecting to and installing the example snap.',
               button: (
                 <ConnectButton
-                 onClick={handleConnectClick}
+                  onClick={handleConnectClick}
                   disabled={!isMetaMaskReady}
                 />
               ),
@@ -203,7 +241,14 @@ const Index = () => {
                 disabled={!state.installedSnap}
               />
             ),
-            input: <VoteTitleInput />
+            input: (
+              <Input
+                type="text"
+                placeholder="Vote title"
+                onChange={handleVoteTitleChange}
+                value={voteTitle}
+              />
+            ),
           }}
           disabled={!state.installedSnap}
           fullWidth={

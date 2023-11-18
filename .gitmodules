@@ -4,3 +4,9 @@
 [submodule "crossChain/lib/ccip"]
 	path = crossChain/lib/ccip
 	url = https://github.com/smartcontractkit/ccip
+[submodule "crossChain/lib/LinkToken"]
+	path = crossChain/lib/LinkToken
+	url = https://github.com/smartcontractkit/LinkToken
+[submodule "crossChain/lib/chainlink"]
+	path = crossChain/lib/chainlink
+	url = https://github.com/smartcontractkit/chainlink
