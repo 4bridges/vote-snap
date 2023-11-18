@@ -1,2 +1,2 @@
 export { defaultSnapOrigin } from './snap';
-export { voteContractAddress } from './web3';
+// export { voteContractAddress } from './web3';

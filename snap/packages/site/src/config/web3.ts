@@ -1,1 +1,0 @@
-export const voteContractAddress = '0x335d0fC0E2fe8C59e86F42Dc35b0B92edeB7ac3d'
