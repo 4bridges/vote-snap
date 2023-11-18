@@ -1,0 +1,3 @@
+[submodule "crossChain/lib/forge-std"]
+	path = crossChain/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
