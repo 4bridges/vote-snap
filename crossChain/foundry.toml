@@ -3,8 +3,9 @@ src = "src"
 out = "out"
 libs = ["node_modules","lib"]
 remappings = [
-    '@chainlink/contracts/=node_modules/@chainlink/contracts',
+    '@chainlink/contracts/=lib/chainlink/contracts/',
     '@chainlink/contracts-ccip/=lib/ccip/contracts/'
 ]
 
+# /home/frank/vote-snap/crossChain/lib/chainlink/contracts/src/v0.8/shared/interfaces
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
