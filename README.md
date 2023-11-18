@@ -31,3 +31,4 @@ Snaps for distribution.
 | Amirhosein Rajabi | `amyrprv` | `@amyrprv` | `rajaby.amir@gmail.com` |
 | Simon T. Fundel | `SiFu1978` | `@4simon.fundel` | `hello@4bridges.ch` |
 | Irmantas Grigonis | `degen.ai` | `@irmantashere` | `ekjoper@gmail.com` | 
+thanks
