@@ -15,6 +15,7 @@ export default defineConfig({
       {
         text: "Intro",
         items: [
+          { text: "Intro", link: "intro" },
           { text: "Markdown Examples", link: "/markdown-examples" },
           { text: "Runtime API Examples", link: "/api-examples" },
           { text: "Random", link: "/random.md" },
