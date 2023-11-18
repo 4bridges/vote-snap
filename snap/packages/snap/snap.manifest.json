@@ -1,13 +1,13 @@
 {
   "version": "0.1.0",
-  "description": "An example Snap written in TypeScript.",
-  "proposedName": "TypeScript Example",
+  "description": "A simple voting mechanism that operates on smart contracts and utilizes MetaMask Snaps for distribution.",
+  "proposedName": "Voting Snap",
   "repository": {
     "type": "git",
     "url": "https://github.com/MetaMask/template-snap-monorepo.git"
   },
   "source": {
-    "shasum": "ynGVlW3CreAdMaWG5kxnQUcTugVsOgbRkAH9Z2pax3A=",
+    "shasum": "q9GWuM0XK8afpduQqzn6CDtOuB9OBXcM3sEJBZzfo6o=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
