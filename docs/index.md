@@ -4,22 +4,21 @@ layout: home
 
 hero:
   name: "Cross Chain DAO"
-  text: "A cross chain of Decentralised autonomous organisation"
-  tagline: My great project tagline
+  tagline: "First Decentral Cross Chain Voting dApp"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Intro
+      link: /intro
     - theme: alt
-      text: API Examples
+      text: Overview
       link: /api-examples
 
 features:
-  - title: Feature A
+  - title: Technology
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
+  - title: Outro
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+  - title: Diverse
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
