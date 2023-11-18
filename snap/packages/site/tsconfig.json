@@ -1,6 +1,10 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "target": "es2017", // Set target to es2017 or higher
+    "module": "es2022", // Set module to es2022 or one of the specified options
+    "lib": ["es2017", "dom"], // Ensure 'es2017' and any other required libraries are included
+    // Other settings...
     "baseUrl": "./",
     "resolveJsonModule": true,
     "jsx": "preserve"
