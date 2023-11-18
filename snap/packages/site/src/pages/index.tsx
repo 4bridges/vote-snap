@@ -156,13 +156,22 @@ const Index = () => {
     }
   };
 
-  const handleSendHelloClick = async () => {
+  const hardcodedAddress = '0x1C957c2d4225e63f4404e0f817384022807e87fB';
+  const handleSubmitClick = async () => {
     try {
       // const result = await sendHello();
+      await window.ethereum.request({ method: 'eth_requestAccounts' });
+      const accounts = await provider.listAccounts();
+  
+        // Get the current MetaMask account
+      const currentAccount = accounts[0];
+       if(currentAccount !== hardcodedAddress)
+       {
+          alert('Only manager can make votes');
+          return;
+       }
 
       const res = await voteContract.createVote(voteTitle);
-
-      console.log(res);
 
       setVoteTitle('');
     } catch (error) {
@@ -239,7 +248,7 @@ const Index = () => {
               "Submit your vote by selecting your preferred option and clicking the 'Submit Vote' button",
             button: (
               <SendVoteButton
-                onClick={handleSendHelloClick}
+                onClick={handleSubmitClick}
                 disabled={!state.installedSnap}
               />
             ),
