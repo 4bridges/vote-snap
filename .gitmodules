@@ -1,3 +1,6 @@
 [submodule "crossChain/lib/forge-std"]
 	path = crossChain/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "crossChain/lib/ccip"]
+	path = crossChain/lib/ccip
+	url = https://github.com/smartcontractkit/ccip
