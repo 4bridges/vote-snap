@@ -105,7 +105,7 @@ export const SendVoteButton = (props: ComponentProps<typeof Button>) => {
     
   };
   return (
-    <Button {...props} onClick={handleVoteSubmit}>
+    <Button {...props}>
       Submit Vote
     </Button>
   );

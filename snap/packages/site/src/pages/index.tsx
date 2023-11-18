@@ -127,7 +127,8 @@ const Index = () => {
 
   const handleSendHelloClick = async () => {
     try {
-      await sendHello();
+    const result =   await sendHello();
+    console.log('xxxxx',result)
     } catch (error) {
       console.error(error);
       dispatch({ type: MetamaskActions.SetError, payload: error });
@@ -198,7 +199,7 @@ const Index = () => {
               "Submit your vote by selecting your preferred option and clicking the 'Submit Vote' button",
             button: (
               <SendVoteButton
-                // onClick={handleSendHelloClick}
+                onClick={handleSendHelloClick}
                 disabled={!state.installedSnap}
               />
             ),
