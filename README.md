@@ -29,4 +29,5 @@ Snaps for distribution.
 | :------------ | :---------- | :----------- | :--------------------- |
 | Frank Dierolf | `FrankBevr` | `@FrankBevr` | `frank_dierolf@web.de` |
 | Amirhosein Rajabi | `amyrprv` | `@amyrprv` | `rajaby.amir@gmail.com` |
-| Simon Fu | `4bridges` | `@4bridges` | `simon.amr@gmail.com` |
+| Simon T. Fundel | `4bridges` | `@4simon.fundel` | `hello@4bridges.ch` |
+| Irmantas Grigonis | `degen.ai` | `@irmantashere` | `ekjoper@gmail.com` | 

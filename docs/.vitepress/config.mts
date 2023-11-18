@@ -8,26 +8,45 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Intro", link: "/Intro" },
+      { text: "Intro", link: "/1-Intro/Motivation" },
+      { text: "Main", link: "/2-Main/Summary" },
+      { text: "Outro", link: "/3-Outro/LessonLearned" },
     ],
 
     sidebar: [
       {
         text: "Intro",
         items: [
-          { text: "Intro", link: "Intro" },
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
-          { text: "Random", link: "/random.md" },
-          { text: "Git Commands", link: "/GitCommands.md" },
+          { text: "Motivation", link: "/1-Intro/Motivation"},
+          { text: "Team Members", link: "/1-Intro/Teammembers"},
+          
         ],
       },
       {
-        text: "Overview",
+        text: "Main",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
-          { text: "Random", link: "/random.md" },
+          { text: "Summary", link: "/2-Main/Summary"},
+          { text: "What", link: "/2-Main/What"},
+          { text: "How Snap", link: "/2-Main/HowSnap"},
+          { text: "How CCIP", link: "/2-Main/HowCCIP"},
+          { text: "Why", link: "/2-Main/Why"},
+        ],
+      },    
+      {
+        text: "Outro",
+        items: [
+          { text: "Lessons Learned", link: "/3-Outro/LessonLearned"},
+          { text: "Thanks", link: "/3-Outro/Thanks"},
+        ],
+      },
+      {
+        text: "Diverse",
+        items: [
+          { text: "Markdown Examples", link: "/4-Diverse/markdown-examples" },
+          { text: "Runtime API Examples", link: "/4-Diverse/api-examples" },
+          { text: "Random", link: "/4-Diverse/random" },
+          { text: "Git Commands", link: "/4-Diverse/GitCommands" },
+          { text: "Commands", link: "/4-Diverse/Commands" },
         ],
       },
       {
@@ -39,7 +58,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: "github", link: "https://github.com/4bridges/vote-snap" },
     ],
   },
 });
