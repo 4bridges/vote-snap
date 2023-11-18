@@ -19,22 +19,4 @@ Hello Dog
 
 -Good bye 
 
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Hello more cats  
-Too many cats
-Enought cats
+NO MORE CATS 
