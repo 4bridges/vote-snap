@@ -17,42 +17,36 @@ export default defineConfig({
       {
         text: "Intro",
         items: [
-          { text: "Motivation", link: "/1-Intro/Motivation"},
-          { text: "Team Members", link: "/1-Intro/Teammembers"},
-          
+          { text: "Motivation", link: "/1-Intro/Motivation" },
+          { text: "Team Members", link: "/1-Intro/Teammembers" },
         ],
       },
       {
         text: "Main",
         items: [
-          { text: "Summary", link: "/2-Main/Summary"},
-          { text: "What", link: "/2-Main/What"},
-          { text: "How Snap", link: "/2-Main/HowSnap"},
-          { text: "How CCIP", link: "/2-Main/HowCCIP"},
-          { text: "Why", link: "/2-Main/Why"},
+          { text: "Summary", link: "/2-Main/Summary" },
+          { text: "What", link: "/2-Main/What" },
+          { text: "How Snap", link: "/2-Main/HowSnap" },
+          { text: "How CCIP", link: "/2-Main/HowCCIP" },
+          { text: "Why", link: "/2-Main/Why" },
         ],
-      },    
+      },
       {
         text: "Outro",
         items: [
-          { text: "Lessons Learned", link: "/3-Outro/LessonLearned"},
-          { text: "Thanks", link: "/3-Outro/Thanks"},
+          { text: "Lessons Learned", link: "/3-Outro/LessonLearned" },
+          { text: "Thanks", link: "/3-Outro/Thanks" },
         ],
       },
       {
         text: "Diverse",
         items: [
+          { text: "Software Design", link: "/4-Diverse/SoftwareDesign" },
           { text: "Markdown Examples", link: "/4-Diverse/markdown-examples" },
           { text: "Runtime API Examples", link: "/4-Diverse/api-examples" },
           { text: "Random", link: "/4-Diverse/random" },
           { text: "Git Commands", link: "/4-Diverse/GitCommands" },
           { text: "Commands", link: "/4-Diverse/Commands" },
-        ],
-      },
-      {
-        text: "Diverse",
-        items: [
-          { text: "Software Design", link: "/SoftwareDesign" },
         ],
       },
     ],
