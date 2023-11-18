@@ -5,7 +5,7 @@ import { ReactComponent as FlaskFox } from '../assets/flask_fox.svg';
 import type { MetamaskState } from '../hooks';
 import { shouldDisplayReconnectButton } from '../utils';
 
-// import { voteContract } from '../utils/voteContract';
+import { voteContract } from '../utils/voteContract';
 
 const Link = styled.a`
   display: flex;
@@ -99,9 +99,9 @@ export const ReconnectButton = (props: ComponentProps<typeof Button>) => {
 
 export const SendVoteButton = (props: ComponentProps<typeof Button>) => {
   const handleVoteSubmit = async () => {    
-    // @ts-ignore
+
     // const result = await voteContract.methods.createVote('contract').call();
-    console.log(result);
+    // console.log(result);
     
   };
   return (
