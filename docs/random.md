@@ -15,7 +15,10 @@ Hello Cat
 Hello Cat  
 Hello Cat  
 Hello Dog  
-Hello Cat  
+Hello Dog  
+
+-Good bye 
+
 Hello more cats  
 Hello more cats  
 Hello more cats  
