@@ -30,6 +30,12 @@ export default defineConfig({
           { text: "Random", link: "/random.md" },
         ],
       },
+      {
+        text: "Diverse",
+        items: [
+          { text: "Software Design", link: "/SoftwareDesign" },
+        ],
+      },
     ],
 
     socialLinks: [
