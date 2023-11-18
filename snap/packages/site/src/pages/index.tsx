@@ -6,6 +6,8 @@ import {
   InstallFlaskButton,
   ReconnectButton,
   SendVoteButton,
+  SendYesButton,
+  SendNoButton,
   Card,
 } from '../components';
 import { defaultSnapOrigin } from '../config';
@@ -157,6 +159,18 @@ const Index = () => {
   };
 
   const hardcodedAddress = '0x1C957c2d4225e63f4404e0f817384022807e87fB';
+
+  const handleAnswerClick = async () => {
+    try {
+      
+  
+
+    } catch (error) {
+      console.error(error);
+      dispatch({ type: MetamaskActions.SetError, payload: error });
+    }
+  };
+
   const handleSubmitClick = async () => {
     try {
       // Get the current MetaMask account
@@ -239,9 +253,9 @@ const Index = () => {
         )}
         <Card
           content={{
-            title: 'Submit your vote',
+            title: 'Vote making Area',
             description:
-              "Submit your vote by selecting your preferred option and clicking the 'Submit Vote' button",
+              `Only manager can make voting that is : ${hardcodedAddress}`,
             button: (
               <SendVoteButton
                 onClick={handleSubmitClick}
@@ -264,14 +278,31 @@ const Index = () => {
             !shouldDisplayReconnectButton(state.installedSnap)
           }
         />
-        <Notice>
-          <p>
-            Please note that the <b>snap.manifest.json</b> and{' '}
-            <b>package.json</b> must be located in the server root directory and
-            the bundle must be hosted at the location specified by the location
-            field.
-          </p>
-        </Notice>
+        <Card
+          content={{
+            title: 'Submit your vote',
+            description:
+              "Submit your vote by selecting your preferred option by clicking 'Yes' or 'No' buttons",
+            button: (
+              <>
+              <SendYesButton
+                onClick={handleAnswerClick}
+                disabled={!state.installedSnap}
+              />
+              <SendNoButton
+                onClick={handleAnswerClick}
+                disabled={!state.installedSnap}
+              />
+              </>
+            )
+          }}
+          disabled={!state.installedSnap}
+          fullWidth={
+            isMetaMaskReady &&
+            Boolean(state.installedSnap) &&
+            !shouldDisplayReconnectButton(state.installedSnap)
+          }
+        />
       </CardContainer>
     </Container>
   );

@@ -101,6 +101,14 @@ export const SendVoteButton = (props: ComponentProps<typeof Button>) => {
   return <Button {...props}>Create Vote</Button>;
 };
 
+export const SendYesButton = (props: ComponentProps<typeof Button>) => {
+  return <Button {...props}>YES</Button>;
+};
+
+export const SendNoButton = (props: ComponentProps<typeof Button>) => {
+  return <Button {...props}>NO</Button>;
+};
+
 export const HeaderButtons = ({
   state,
   onConnectClick,
