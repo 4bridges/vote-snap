@@ -25,7 +25,9 @@ Snaps for distribution.
 
 ### Team
 
-| Name          | Discord     | Telegram     | E-mail                 |
-| :------------ | :---------- | :----------- | :--------------------- |
+| Name    1111111      | Discord     | Telegram     | E-mail                 |
+| Emad Hassanipanah | `Emadpanah` | `@Emadpanah` | `emad.panah@4briges.ch` |
 | Frank Dierolf | `FrankBevr` | `@FrankBevr` | `frank_dierolf@web.de` |
 | Amirhosein Rajabi | `amyrprv` | `@amyrprv` | `rajaby.amir@gmail.com` |
+| Simon T. Fundel | `SiFu1978` | `@4simon.fundel` | `hello@4bridges.ch` |
+| Irmantas Grigonis | `degen.ai` | `@irmantashere` | `ekjoper@gmail.com` |

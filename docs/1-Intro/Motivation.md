@@ -1,0 +1,6 @@
+# Motivation
+## **Why we have build the first Cross Chain DAO**
+### The Evolution towards Cross-Chain DAOs
+The emergence of the first Cross-Chain DAO marks a critical stride in the evolution of decentralized governance. The Cross Chain DAO, operating across multiple blockchain networks, cater to the growing need for interoperability and inclusivity within the blockchain ecosystem. Traditional DAOs have often been confined to a single blockchain network, limiting their scope and potential. However, Cross-Chain DAOs transcend these limitations, leveraging the unique strengths of different blockchains while fostering collaboration and synergy among disparate communities.
+
+The rationale behind building Cross-Chain DAOs lies in their capacity to unlock a myriad of opportunities. They enable seamless asset transfer, information sharing, and decision-making across diverse blockchains, amplifying the collective power of participants. By bridging these networks, Cross-Chain DAOs facilitate efficient resource utilization, enhance liquidity, and promote innovation through cross-pollination of ideas. This evolutionary step empowers DAOs to embrace a broader spectrum of assets, participants, and use cases, ultimately fostering a more robust, interconnected, and adaptive decentralized ecosystem.

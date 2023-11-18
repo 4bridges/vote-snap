@@ -7,11 +7,11 @@ hero:
   tagline: "First Decentral Cross Chain Voting dApp"
   actions:
     - theme: brand
-      text: Intro
-      link: /Intro
+      text: Enter Docs
+      link: /1-Intro/Motivation
     - theme: alt
-      text: Overview
-      link: /api-examples
+      text:  Application
+      link: https://github.com/4bridges/vote-snap
 
 features:
   - title: Technology
