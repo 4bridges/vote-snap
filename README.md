@@ -28,3 +28,4 @@ Snaps for distribution.
 | Name          | Discord     | Telegram     | E-mail                 |
 | :------------ | :---------- | :----------- | :--------------------- |
 | Frank Dierolf | `FrankBevr` | `@FrankBevr` | `frank_dierolf@web.de` |
+| Amirhosein Rajabi | `amyrprv` | `@amyrprv` | `rajaby.amir@gmail.com` |
