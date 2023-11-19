@@ -8,7 +8,7 @@
     <br />
     <a href="https://crosschaindao.surge.sh" name="Docs">Docs</a>
     ·
-    <a href="">Youtube</a>
+    <a href="https://youtu.be/acGV6x2Ys3c">Youtube</a>
     ·
     <a href="https://github.com/4bridges/vote-snap">Code</a>
   </p>
