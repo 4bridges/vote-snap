@@ -67,7 +67,7 @@ So, whether you hear the symphony of my code or spot a frog leaping across your 
 ### **The Eyed Tree Frog**
 **Irmantas likes Web3 Swag**
 
-<img src="//assets/Irmantas_frog.png" width="400" height="400">
+<img src="/assets/Irmantas_frog.png" width="400" height="400">
 
 :::details
   The Red-Eyed Tree Frog, found in the rainforests of Central America, is instantly recognizable for its vibrant green body and large, striking red eyes. This tree-dwelling amphibian's vivid appearance and unique features have made it a beloved icon of tropical rainforest wildlife.
