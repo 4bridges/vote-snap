@@ -23,6 +23,13 @@ w.i.p.
 A simple voting mechanism that operates on smart contracts and utilizes MetaMask
 Snaps for distribution.
 
+- Main Tracks
+  - Snap
+  - Chainlink
+
+- Side Tracks
+  - [Linea](https://explorer.goerli.linea.build/address/0xEFea43DcF3f2199973e957D9c1657B9810419157)
+
 ### Team
 
 | Name              | Discord     | Telegram         | E-mail                  |
