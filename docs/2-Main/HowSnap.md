@@ -1,6 +1,17 @@
 ## How Snap
 
-### MetaMask Snaps allows users to add features and functionality directly into their MetaMask wallet.
+:::info
 
-A Snap is an application built by a third-party developer that adds features and functionality to MetaMask. Snaps can connect to blockchain protocols beyond Ethereum, show insights about transactions, display notifications, add new privacy and identity features, and much more.
+We encountered some issue. We tackled them one by one.
 
+:::
+
+**We had problem with Windows starter kit**
+- We changed it some structure and now our version works
+
+**We had problem with Web3.js and snaps**
+- We changed it to Ethers.js
+
+**We had problem with Smart contract directly**
+- We changed it to just notify about new voting
+  

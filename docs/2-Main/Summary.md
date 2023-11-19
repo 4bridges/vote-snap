@@ -14,7 +14,7 @@
 3. **Innovation in Web3:**
    - By embracing MetaMask Snaps, we contribute to the ongoing innovation within the web3 ecosystem, fostering a more dynamic and feature-rich decentralized internet.
 
-With MetaMask Snaps, we aim to empower users and contribute to the evolution of the decentralized internet. Explore, customize, and enjoy a richer web3 experience![^1]
+   - With MetaMask Snaps, we aim to empower users and contribute to the evolution of the decentralized internet. Explore, customize, and enjoy a richer web3 experience![^1]
 
 
 
@@ -22,12 +22,12 @@ With MetaMask Snaps, we aim to empower users and contribute to the evolution of 
 
 :::details  
 
-Hello I have the following markdown. We are using vitepress. Can you format this markdown nicely and add some easy to understandable content to it?  
+ - Hello I have the following markdown. We are using vitepress. Can you format this markdown nicely and add some easy to understandable content to it?  
 ```md  
 
 
 ### MetaMask Snaps allows users to add features and functionality directly into their MetaMask wallet.  
-We believe a decentralized internet are accessible to all and owned by the people who use it. With Snaps we can capture the full extent of the innovation happening in web3.  
+ - We believe a decentralized internet are accessible to all and owned by the people who use it. With Snaps we can capture the full extent of the innovation happening in web3.  
 ```
 
 :::
