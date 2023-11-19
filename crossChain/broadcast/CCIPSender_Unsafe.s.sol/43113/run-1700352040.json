@@ -20,44 +20,13 @@
       "isFixedGasLimit": false
     }
   ],
-  "receipts": [
-    {
-      "transactionHash": "0xd7ec87047a6f14d946fd135e54b8094a3a9f8e5915b86678df4125bb75ce9e9b",
-      "transactionIndex": "0x1",
-      "blockHash": "0x49ce75cbb5b81f116ed02cd5ee714bfe13bf5f0806c59c3f2deda1b69a4d2b80",
-      "blockNumber": "0x1a9863d",
-      "from": "0xeC3417669F881720A6131f4ecf4ED6F38f6e7450",
-      "to": null,
-      "cumulativeGasUsed": "0x70d3e",
-      "gasUsed": "0x57f9f",
-      "contractAddress": "0xC93C389d9f0765b2988e4CFB9A5DC21d350cb4D0",
-      "logs": [
-        {
-          "address": "0x0b9d5D9136855f6FEc3c0993feE6E9CE8a297846",
-          "topics": [
-            "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
-            "0x000000000000000000000000c93c389d9f0765b2988e4cfb9a5dc21d350cb4d0",
-            "0x000000000000000000000000554472a2720e5e7d5d3c817529aba05eed5f82d8"
-          ],
-          "data": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-          "blockHash": "0x49ce75cbb5b81f116ed02cd5ee714bfe13bf5f0806c59c3f2deda1b69a4d2b80",
-          "blockNumber": "0x1a9863d",
-          "transactionHash": "0xd7ec87047a6f14d946fd135e54b8094a3a9f8e5915b86678df4125bb75ce9e9b",
-          "transactionIndex": "0x1",
-          "logIndex": "0x2",
-          "removed": false
-        }
-      ],
-      "status": "0x1",
-      "logsBloom": "0x01000080000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000200000000000000000000000000000000000000000000000000000000000000020800000000000000000000000008000800000000000000000010000000000000000000000000000000000000000000000000000000000000",
-      "type": "0x2",
-      "effectiveGasPrice": "0x684ee1800"
-    }
-  ],
+  "receipts": [],
   "libraries": [],
-  "pending": [],
+  "pending": [
+    "0xd7ec87047a6f14d946fd135e54b8094a3a9f8e5915b86678df4125bb75ce9e9b"
+  ],
   "returns": {},
-  "timestamp": 1700352049,
+  "timestamp": 1700352040,
   "chain": 43113,
   "multi": false,
   "commit": "1004f08"
