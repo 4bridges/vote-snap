@@ -1,20 +1,20 @@
 #!/bin/bash
 
-# Function to run the first command
-run_command1() {
-    echo "Running Command 1..."
+# Function to run the command for deploying CCIP Sender
+run_deploy_ccip_sender() {
+    echo "Running DeployCCIPSender_Unsafe command..."
     forge script ./script/CCIPSender_Unsafe.s.sol:DeployCCIPSender_Unsafe -vvv --broadcast --rpc-url avalancheFuji
 }
 
-# Function to run the second command
-run_command2() {
-    echo "Running Command 2..."
+# Function to run the command for deploying CCIP Receiver
+run_deploy_ccip_receiver() {
+    echo "Running DeployCCIPReceiver_Unsafe command..."
     forge script ./script/CCIPReceiver_Unsafe.s.sol:DeployCCIPReceiver_Unsafe -vvv --broadcast --rpc-url ethereumSepolia
 }
 
-# Function to run the third command
-run_command3() {
-    echo "Running Command 3..."
+# Function to run the command for sending CCIP
+run_send_ccip() {
+    echo "Running send command (Before send Link to Sender)..."
 
     # Source the .env file to set the environment variables
     source .env
@@ -26,20 +26,21 @@ run_command3() {
     cast send "${sender_address}" --rpc-url avalancheFuji --private-key="$PRIVATE_KEY" "send(address,uint64,bool)" "${receiver_address}" 16015286601757825753 true
 }
 
-run_command4() {
-    echo "Running Command 4..."
+# Function to run the command for deploying Vote Pair Sender
+run_deploy_vote_pair_sender() {
+    echo "Running DeployVotePairSender_Unsafe command..."
     forge script ./script/VotePairSender_Unsafe.s.sol:DeployVotePairSender_Unsafe -vvv --broadcast --rpc-url avalancheFuji
 }
 
-# Function to run the second command
-run_command5() {
-    echo "Running Command 5..."
+# Function to run the command for deploying Vote Pair Receiver
+run_deploy_vote_pair_receiver() {
+    echo "Running DeployVotePairReceiver_Unsafe command..."
     forge script ./script/VotePairReciever_Unsafe.s.sol:DeployVotePairReceiver_Unsafe -vvv --broadcast --rpc-url ethereumSepolia
 }
 
-# Function to run the third command
-run_command6() {
-    echo "Running Command 6..."
+# Function to run the command for sending Vote Pair
+run_send_vote_pair() {
+    echo "Running send command (Before send Link to Sender)..."
 
     # Source the .env file to set the environment variables
     source .env
@@ -52,11 +53,11 @@ run_command6() {
 }
 
 # Menu options
-menu() {
+display_menu() {
     echo "Select an option:"
     echo "1. Run DeployCCIPSender_Unsafe"
     echo "2. Run DeployCCIPReceiver_Unsafe"
-    echo "3. Run send command(Before send Link to Sender)"
+    echo "3. Run send command (Before send Link to Sender)"
     echo "4. Run DeployVotePairSender_Unsafe"
     echo "5. Run DeployVotePairReceiver_Unsafe"
     echo "6. Run send command (Before send Link to Sender)"
@@ -66,19 +67,20 @@ menu() {
     echo
 
     case $choice in
-        1) run_command1 ;;
-        2) run_command2 ;;
-        3) run_command3 ;;
-        4) run_command4 ;;
-        5) run_command5 ;;
-        6) run_command6 ;;
+        1) run_deploy_ccip_sender ;;
+        2) run_deploy_ccip_receiver ;;
+        3) run_send_ccip ;;
+        4) run_deploy_vote_pair_sender ;;
+        5) run_deploy_vote_pair_receiver ;;
+        6) run_send_vote_pair ;;
         0) exit ;;
         *) echo "Invalid option. Please try again." ;;
     esac
 
     echo
-    menu
+    display_menu
 }
 
 # Run the menu
-menu
+display_menu
+
