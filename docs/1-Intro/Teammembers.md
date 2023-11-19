@@ -86,7 +86,7 @@ So, whether you hear the symphony of my code or spot a frog leaping across your 
 ## Simon T. Fundel
 ### **Bufa the Jolly**
 **Simon likes Entrepreneurship**
-<img src="/assets/Simon_Froger.png" width="400" height="400">
+<img src="/assets/Simon.png" width="400" height="400">
 - 🍃 **Frog Habitat Enthusiast:** From virtual ponds to blockchain lily pads, I'm creating the ideal habitats for my digital froggy companions. They may not croak, but they sure do code!
 
 
