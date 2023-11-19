@@ -16,18 +16,16 @@
 
 ### Screenshot
 
-w.i.p.
+![Screenshot](https://i.ibb.co/FxrML6z/333fb821-277b-4c99-85a0-4493bebe2414.jpg)
 
 ### Summary
 
 A simple voting mechanism that operates on smart contracts and utilizes MetaMask
 Snaps for distribution and chainlink ccip for cross chain.
 
-- Main Tracks
-  - Metamask Snap
-  - Chainlink CCIP
-- Side Tracks
-  - [Linea](https://explorer.goerli.linea.build/address/0xEFea43DcF3f2199973e957D9c1657B9810419157)
+- Main Tracks: Metamask Snap, Chainlink CCIP
+- Side Tracks:
+  [Linea](https://explorer.goerli.linea.build/address/0xEFea43DcF3f2199973e957D9c1657B9810419157)
 
 - `./docs` contains our documentation or via
   [site](https://crosschaindao.surge.sh)
