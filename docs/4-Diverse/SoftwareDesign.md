@@ -38,7 +38,4 @@ Multichain DAO
 [ClassDiagram](https://www.plantuml.com/plantuml/uml/JO_1Ii0m38RlVOfusr1VO0SPJ7m4BsE7sePPw9gHnCaOlhjf6UWj-Vw_Nyaewbc_jkmUz1CtX3txL9mcpJZ0n2GoKL7sGTz9qRcGlGZK6Ixt2FHTa0VmCJAA63WiaG7ccpnz4ELbNYovdQASokf-_glUJ4zymlKdgBWz2unUiQvTR-kA-efxfXDZPTBryFm2RMnrmH9RaJ4aFD1o-siqQaV-0W00)\
 ![ClassDiagram](https://www.plantuml.com/plantuml/png/JO_1Ii0m38RlVOfusr1VO0SPJ7m4BsE7sePPw9gHnCaOlhjf6UWj-Vw_Nyaewbc_jkmUz1CtX3txL9mcpJZ0n2GoKL7sGTz9qRcGlGZK6Ixt2FHTa0VmCJAA63WiaG7ccpnz4ELbNYovdQASokf-_glUJ4zymlKdgBWz2unUiQvTR-kA-efxfXDZPTBryFm2RMnrmH9RaJ4aFD1o-siqQaV-0W00)
 
-### SequenceDiagram
 
-[SequenceDiagram - w.i.p.]()\
-![SequenceDiagram - w.i.p.]()

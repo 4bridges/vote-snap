@@ -1,8 +1,17 @@
-# How Snap
-## **Why we using Metamask Snaps**
-### MetaMask Snaps allows users to add features and functionality directly into their MetaMask wallet.
+## How Snap
 
-We believe a decentralized internet are accessible to all and owned by the people who use it. With Snaps we can capture the full extent of the innovation happening in web3.
+:::info
 
+We encountered some issue. We tackled them one by one.
 
+:::
 
+**We had problem with Windows starter kit**
+- We changed it some structure and now our version works
+
+**We had problem with Web3.js and snaps**
+- We changed it to Ethers.js
+
+**We had problem with Smart contract directly**
+- We changed it to just notify about new voting
+  

@@ -24,17 +24,16 @@ export default defineConfig({
       {
         text: "Main",
         items: [
-          { text: "Summary", link: "/2-Main/Summary" },
           { text: "What", link: "/2-Main/What" },
+          { text: "Why", link: "/2-Main/Why" },
           { text: "How Snap", link: "/2-Main/HowSnap" },
           { text: "How CCIP", link: "/2-Main/HowCCIP" },
-          { text: "Why", link: "/2-Main/Why" },
+          { text: "Summary", link: "/2-Main/Summary" },
         ],
       },
       {
         text: "Outro",
         items: [
-          { text: "Lessons Learned", link: "/3-Outro/LessonLearned" },
           { text: "Thanks", link: "/3-Outro/Thanks" },
         ],
       },
