@@ -34,7 +34,7 @@ contract Vote {
     }
 
     function vote(bool _vote) external hasNotVoted {
-        votes[msg.sender] = _vote;
+        votes[msg.sender] = true;
         if (_vote)
             acceptedVoteCount++;
         else
@@ -42,6 +42,8 @@ contract Vote {
         
     }
 
+    function getSummery() public view returns (string memory, bool){
+        return(title,votes[msg.sender]);
+    }
     
-
 }
