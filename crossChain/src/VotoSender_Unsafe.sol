@@ -23,7 +23,7 @@ contract CCIPSender_Unsafe {
         uint64 destinationChainSelector
     ) external {
         votes += 1;
-        send(receiver, someText, destinationChainSelector);
+        // send(receiver, someText, destinationChainSelector);
     }
 
     function send(
