@@ -201,7 +201,7 @@ const Index = () => {
             title: 'Your vote sumbited!',
             description: `${
               summary[0]
-            } \n Disaggree Count: ${rejectedVote.toString()} \n Agree Count: ${acceptedVotes.toString()}`,
+            } \n Disaggree Count: ${rejectedVote.toString()} </br> Agree Count: ${acceptedVotes.toString()}`,
           }}
         />,
       );
