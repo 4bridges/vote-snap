@@ -1,5 +1,6 @@
-import { useContext, useState, ChangeEvent } from 'react';
+import { useContext, useState, ChangeEvent, useEffect } from 'react';
 import styled from 'styled-components';
+import { ethers } from 'ethers';
 
 import {
   ConnectButton,
@@ -16,11 +17,15 @@ import {
   connectSnap,
   getSnap,
   isLocalSnap,
-  sendHello,
   shouldDisplayReconnectButton,
 } from '../utils';
 
-import { provider, voteContract } from '../utils/voteContract';
+import {
+  provider,
+  voteContract,
+  getVoteContract,
+  signer,
+} from '../utils/voteContract';
 
 const Container = styled.div`
   display: flex;
@@ -136,11 +141,72 @@ const Input = styled.input`
 
 const Index = () => {
   const [state, dispatch] = useContext(MetaMaskContext);
+
   const [voteTitle, setVoteTitle] = useState<string>('');
+  const [voteElements, setVoteElements] = useState<JSX.Element>();
+
+  useEffect(() => {
+    rednerVotes();
+  }, []);
 
   const isMetaMaskReady = isLocalSnap(defaultSnapOrigin)
     ? state.isFlask
     : state.snapsDetected;
+
+  const hardcodedAddress = '0x1C957c2d4225e63f4404e0f817384022807e87fB';
+
+  const rednerVotes = async () => {
+    const deployedContracts = await voteContract.getDeployedVotes();
+
+    if (deployedContracts.length == 0) return;
+
+    const contract = new ethers.Contract(
+      deployedContracts[0],
+      getVoteContract().abi,
+      signer,
+    );
+    const summary = await contract.getSummery();
+
+    if (!summary[1])
+      setVoteElements(
+        <Card
+          content={{
+            title: 'Submit your vote',
+            description: summary[0],
+            button: (
+              <div style={{ display: 'flex' }}>
+                <SendYesButton
+                  onClick={() => {
+                    handleAnswerClick(contract, true);
+                  }}
+                  style={{ marginRight: '8px' }}
+                />
+                <SendNoButton
+                  onClick={() => {
+                    handleAnswerClick(contract, false);
+                  }}
+                />
+              </div>
+            ),
+          }}
+        />,
+      );
+    else {
+      const acceptedVotes = await contract.acceptedVoteCount();
+      const rejectedVote = await contract.rejectedVoteCount();
+
+      setVoteElements(
+        <Card
+          content={{
+            title: 'Your vote sumbited!',
+            description: `${
+              summary[0]
+            } \n Disaggree Count: ${rejectedVote.toString()} Agree Count: ${acceptedVotes.toString()}`,
+          }}
+        />,
+      );
+    }
+  };
 
   const handleConnectClick = async () => {
     try {
@@ -158,13 +224,12 @@ const Index = () => {
     }
   };
 
-  const hardcodedAddress = '0x1C957c2d4225e63f4404e0f817384022807e87fB';
-
-  const handleAnswerClick = async () => {
+  const handleAnswerClick = async (
+    address: ethers.Contract,
+    answer: boolean,
+  ) => {
     try {
-      
-  
-
+      await address.vote(answer);
     } catch (error) {
       console.error(error);
       dispatch({ type: MetamaskActions.SetError, payload: error });
@@ -173,7 +238,6 @@ const Index = () => {
 
   const handleSubmitClick = async () => {
     try {
-      // Get the current MetaMask account
       const currentAccount = window.ethereum.selectedAddress;
 
       if (currentAccount?.toLowerCase() !== hardcodedAddress.toLowerCase()) {
@@ -254,8 +318,7 @@ const Index = () => {
         <Card
           content={{
             title: 'Vote making Area',
-            description:
-              `Only manager can make voting that is : ${hardcodedAddress}`,
+            description: `Only manager can make voting`,
             button: (
               <SendVoteButton
                 onClick={handleSubmitClick}
@@ -278,31 +341,7 @@ const Index = () => {
             !shouldDisplayReconnectButton(state.installedSnap)
           }
         />
-        <Card
-          content={{
-            title: 'Submit your vote',
-            description:
-              "Submit your vote by selecting your preferred option by clicking 'Yes' or 'No' buttons",
-            button: (
-              <>
-              <SendYesButton
-                onClick={handleAnswerClick}
-                disabled={!state.installedSnap}
-              />
-              <SendNoButton
-                onClick={handleAnswerClick}
-                disabled={!state.installedSnap}
-              />
-              </>
-            )
-          }}
-          disabled={!state.installedSnap}
-          fullWidth={
-            isMetaMaskReady &&
-            Boolean(state.installedSnap) &&
-            !shouldDisplayReconnectButton(state.installedSnap)
-          }
-        />
+        {voteElements}
       </CardContainer>
     </Container>
   );

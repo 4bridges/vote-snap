@@ -14,11 +14,11 @@ hero:
       link: https://github.com/4bridges/vote-snap
 
 features:
-  - title: Technology
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Outro
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Diverse
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: ⚔ Cross Chain
+    details: When chains fell in love and come together
+  - title: 🎇 Snapy
+    details: Interoperabilty on a snap of button
+  - title: 🔨 Well crafted
+    details: Docs, CLIs, Structure everywhere
 ---
 

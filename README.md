@@ -2,13 +2,13 @@
 <img src="./Logo.webp" alt="logo" width="80" height="80" />
 </div>
 
-<h3 align="center">SwipePM</h3>
+<h3 align="center">Cross Chain DAO</h3>
   <p align="center">
     Multichain DAO - CCIP Snap Fusion
     <br />
-    <a href="" name="Figma">Figma</a>
+    <a href="https://crosschaindao.surge.sh" name="Docs">Docs</a>
     ·
-    <a href="">Youtube</a>
+    <a href="https://youtu.be/acGV6x2Ys3c">Youtube</a>
     ·
     <a href="https://github.com/4bridges/vote-snap">Code</a>
   </p>
@@ -21,7 +21,19 @@ w.i.p.
 ### Summary
 
 A simple voting mechanism that operates on smart contracts and utilizes MetaMask
-Snaps for distribution.
+Snaps for distribution and chainlink ccip for cross chain.
+
+- Main Tracks
+  - Metamask Snap
+  - Chainlink CCIP
+- Side Tracks
+  - [Linea](https://explorer.goerli.linea.build/address/0xEFea43DcF3f2199973e957D9c1657B9810419157)
+
+- `./docs` contains our documentation or via
+  [site](https://crosschaindao.surge.sh)
+- `./snap` contains our snap
+- `./contracts` contains our basic contract
+- `./crosschain` contains our vote contract in crosschain version.
 
 ### Team
 
