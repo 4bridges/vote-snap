@@ -1,12 +1,7 @@
-## **Why Choose Metamask Snaps?**
+## Why did we choice Metamask Snaps?
 
-### Introduction to MetaMask Snaps
+ Our journey to build a Cross-Chain DAO Voting Protocol is driven by a passion for inclusivity, user ownership, and the relentless pursuit of a decentralized internet that serves the many, not the few. With MetaMask Snaps as our technological ally, we're not just building a protocol; we're shaping a future where decentralized governance is a collaborative and inclusive endeavor.
 
-MetaMask Snaps empower users to seamlessly integrate additional features and functionalities directly into their MetaMask wallet. This enhances the overall user experience and opens up new possibilities within the decentralized web (web3).
-
-### Embracing a Decentralized Internet
-
-At the core of our philosophy is the belief that a decentralized internet should be accessible to everyone and owned by its users. By leveraging MetaMask Snaps, we aim to make the decentralized web more user-friendly and inclusive. This technology allows us to tap into the full spectrum of innovations taking place in the web3 space.
 
 ## Key Benefits of Using MetaMask Snaps
 
@@ -29,8 +24,8 @@ With MetaMask Snaps, we aim to empower users and contribute to the evolution of 
 
 Hello I have the following markdown. We are using vitepress. Can you format this markdown nicely and add some easy to understandable content to it?  
 ```md  
-# How Snap  
-## **Why we using Metamask Snaps**  
+
+
 ### MetaMask Snaps allows users to add features and functionality directly into their MetaMask wallet.  
 We believe a decentralized internet are accessible to all and owned by the people who use it. With Snaps we can capture the full extent of the innovation happening in web3.  
 ```
@@ -38,3 +33,7 @@ We believe a decentralized internet are accessible to all and owned by the peopl
 :::
 
 
+Conclusion
+In conclusion, our journey to build a Cross-Chain DAO Voting Protocol is driven by a passion for inclusivity, user ownership, and the relentless pursuit of a decentralized internet that serves the many, not the few. With MetaMask Snaps as our technological ally, we're not just building a protocol; we're shaping a future where decentralized governance is a collaborative and inclusive endeavor.
+
+Thank you for joining us on this exciting venture towards a decentralized world that truly belongs to its users. Together, let's build a digital landscape that knows no boundaries.
