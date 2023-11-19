@@ -10,6 +10,6 @@ export const defaultSnapOrigin =
   // eslint-disable-next-line no-restricted-globals
   process.env.SNAP_ORIGIN ?? `local:http://localhost:8080`;
 
-  export const voteContractAddress = '0xEd1943131991C0ca3f7f2B43381cc5547A18Ad25'
+  export const voteContractAddress = '0x4A8D8a762508018fFEB54d0C4A0d2Ac8B2c53CC1'
   export const JsonRpcProviderAddress = 'https://sepolia.infura.io/v3/a80f928d9a7940779f24bd95f48b3e05';
 
