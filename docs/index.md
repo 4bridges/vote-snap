@@ -15,7 +15,7 @@ hero:
 
 features:
   - title: ⚔ Cross Chain
-    details: When chains fell in love and come together
+    details: When chains fall in love and come together
   - title: 🎇 Snapy
     details: Interoperabilty on a snap of button
   - title: 🔨 Well crafted
