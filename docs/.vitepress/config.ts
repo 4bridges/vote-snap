@@ -46,6 +46,7 @@ export default defineConfig({
           { text: "Random", link: "/4-Diverse/random" },
           { text: "Git Commands", link: "/4-Diverse/GitCommands" },
           { text: "Commands", link: "/4-Diverse/Commands" },
+          { text: "Texto", link: "/4-Diverse/Testo" },
         ],
       },
     ],
